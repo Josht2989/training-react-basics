@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import SingleMessageRouter from "./routes/SingleMessageRouter"
-import TodoListRouter from "./routes/TodoListRouter"
+import SimpleMessageRouter from "./routes/SimpleMessageRouter"
+import SimpleTodoListRouter from "./routes/SimpleTodoListRouter"
+import ReduxTodoListRouter from "./routes/ReduxTodoListRouter"
+import AxiosApiRouter from "./routes/AxiosApiRouter"
 import NavigationBar from "./components/NavigationBar"
 
 class App extends Component {
@@ -12,8 +14,10 @@ class App extends Component {
                 <div>
                     <NavigationBar/>
                     <Switch>
-                        <Route path="/" exact component={SingleMessageRouter} />
-                        <Route path="/todo" component={TodoListRouter} />
+                        <Route path="/" exact component={SimpleMessageRouter} />
+                        <Route path="/simpleTodo" exact component={SimpleTodoListRouter} />
+                        <Route path="/reduxTodo" exact component={ReduxTodoListRouter} />
+                        <Route path="/axiosApi" exact component={AxiosApiRouter} />
                     </Switch>
                 </div>
             </BrowserRouter>

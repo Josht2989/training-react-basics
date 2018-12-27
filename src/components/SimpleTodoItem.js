@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { List, Icon } from 'semantic-ui-react';
 
-class TodoItem extends Component {
+class SimpleTodoItem extends Component {
 
     onTodoDeleted() {
-        this.props.onDelete(this.props.position);
+        this.props.onTodoDeleted(this.props.position);
     }
 
     render() {
@@ -16,4 +16,4 @@ class TodoItem extends Component {
     }
 }
 
-export default TodoItem;
+export default SimpleTodoItem;

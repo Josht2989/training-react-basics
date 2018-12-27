@@ -4,22 +4,13 @@ import NavigationItem from "./NavigationItem"
 
 class NavigationBar extends Component {
 
-    constructor() {
-        super();
-        this.state = {
-            activeItem: "hello"
-        };
-    }
-
-    onNavigationItemClicked(id) {
-        this.setState({activeItem: id});
-    }
-
     render() {
         return (
             <Menu pointing>
-                <NavigationItem name="hello" to="/" active={this.state.activeItem} onClick={this.onNavigationItemClicked.bind(this)}/>
-                <NavigationItem name="todo" to="/todo" active={this.state.activeItem} onClick={this.onNavigationItemClicked.bind(this)}/>
+                <NavigationItem name="hello" to="/"/>
+                <NavigationItem name="simpleTodo" to="/simpleTodo" />
+                <NavigationItem name="reduxTodo" to="/reduxTodo" />
+                <NavigationItem name="axiosApi" to="/axiosApi" />
             </Menu>
         );
     }
