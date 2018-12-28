@@ -17,7 +17,6 @@ class ReduxTodoItem extends Component {
 function mapDispatchToProps(dispatch, props) {
     return {
         onTodoDeleted: () => {
-            console.log('removeTodoItem '+props.position);
             dispatch(removeTodoItem(props.position));
         }
     }

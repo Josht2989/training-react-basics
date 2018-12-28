@@ -35,28 +35,23 @@ const initialState = {
 };
 
 function reducer(state = initialState, {type, payload}) {
-    console.log('before: ', state);
+
+    let newState = JSON.parse(JSON.stringify(state));
     switch(type) {
         case TODO_ADD_ITEM:
-            console.log('TODO_ADD_ITEM ');
-            let todosAddCopy = state.todos;
-            todosAddCopy.push(state.current);
-            state.todos = todosAddCopy
+            newState.todos.push(state.current);
         break;
         case TODO_REMOVE_ITEM:
-            console.log('TODO_REMOVE_ITEM '+payload);
-            let todosRemoveCopy = state.todos;
-            todosRemoveCopy.splice(payload, 1);
-            state.todos = todosRemoveCopy
+            newState.todos.splice(payload, 1);
         break;
         case TODO_SET_CURRENT:
-            console.log('TODO_SET_CURRENT '+payload);
-            state.current = payload;
+            newState.current = payload;
         break;
         default:
+        break;
     }
-    console.log('after: ', state);
-    return state;
+
+    return newState;
 }
 
 // store

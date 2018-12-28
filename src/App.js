@@ -4,6 +4,7 @@ import SimpleMessageRouter from "./routes/SimpleMessageRouter"
 import SimpleTodoListRouter from "./routes/SimpleTodoListRouter"
 import ReduxTodoListRouter from "./routes/ReduxTodoListRouter"
 import AxiosApiRouter from "./routes/AxiosApiRouter"
+import TranslationRouter from "./routes/TranslationRouter"
 import NavigationBar from "./components/NavigationBar"
 
 class App extends Component {
@@ -18,6 +19,7 @@ class App extends Component {
                         <Route path="/simpleTodo" exact component={SimpleTodoListRouter} />
                         <Route path="/reduxTodo" exact component={ReduxTodoListRouter} />
                         <Route path="/axiosApi" exact component={AxiosApiRouter} />
+                        <Route path="/translation" exact component={TranslationRouter} />
                     </Switch>
                 </div>
             </BrowserRouter>

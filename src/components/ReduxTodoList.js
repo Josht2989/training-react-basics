@@ -14,7 +14,7 @@ class ReduxTodoList extends Component {
         })
         return(
             <div className="TodoList">
-                <ReduxTodoForm />
+                <ReduxTodoForm current={this.props.current} />
                 <br/>
                 { this.props.todos.length === 0 ? "No todos yet" : <List>{todosElements}</List> }
             </div>

@@ -18,11 +18,9 @@ class ReduxTodoForm extends Component {
 function mapDispatchToProps(dispatch) {
     return {
         onTodoInput: e => {
-            console.log('setTodoCurrent '+e.target.value);
             dispatch(setTodoCurrent(e.target.value));
         },
         onTodoAdded: () => {
-            console.log('addTodoItem');
             dispatch(addTodoItem());
         }
     }

@@ -11,6 +11,7 @@ class NavigationBar extends Component {
                 <NavigationItem name="simpleTodo" to="/simpleTodo" />
                 <NavigationItem name="reduxTodo" to="/reduxTodo" />
                 <NavigationItem name="axiosApi" to="/axiosApi" />
+                <NavigationItem name="translation" to="/translation" />
             </Menu>
         );
     }
